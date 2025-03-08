@@ -6,7 +6,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    min-height: 100vh;
 }
 
 .container {
@@ -15,12 +15,21 @@ body {
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     width: 90%;
-    max-width: 500px;
-    text-align: center;
+    max-width: 800px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 20px;
+}
+
+.form-container, .result-container {
+    flex: 1;
+    min-width: 300px;
 }
 
 h2 {
     color: #333;
+    text-align: center;
 }
 
 form {
@@ -31,6 +40,7 @@ form {
 label {
     margin-top: 10px;
     font-weight: bold;
+    text-align: left;
 }
 
 input {
@@ -56,8 +66,17 @@ button:hover {
     background-color: #0056b3;
 }
 
+.result-container {
+    background: #f8f9fa;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    min-height: 150px;
+    text-align: center;
+}
+
 h3 {
-    margin-top: 20px;
+    margin-top: 0;
     color: #28a745;
 }
 
@@ -71,4 +90,11 @@ li {
     margin: 5px 0;
     padding: 8px;
     border-radius: 5px;
+}
+
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        align-items: center;
+    }
 }
