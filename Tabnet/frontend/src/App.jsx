@@ -48,12 +48,12 @@ function App() {
         <div className="result-container">
           <h3>Prediction Result</h3>
           <p><strong>Predicted Class:</strong> {prediction.class}</p>
-          <h4>Class Probabilities:</h4>
+          {/* <h4>Class Probabilities:</h4>
           <ul>
             {Object.entries(prediction.probabilities).map(([label, prob]) => (
               <li key={label}>{label}: {prob.toFixed(4)}</li>
             ))}
-          </ul>
+          </ul> */}
         </div>
       )}
     </div>
