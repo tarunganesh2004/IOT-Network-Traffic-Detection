@@ -6,12 +6,12 @@ function App() {
   const [formData, setFormData] = useState({
     Protocol: '',
     Flow_IAT_Mean: '',
-    FIN_Flag_Count: '',
+    FIN_Flag_Count: '0', // Default to 0
     RST_Flag_Count: '',
     Down_Up_Ratio: '',
     Fwd_Seg_Size_Min: '',
     Idle_Max: '',
-    Connection_Type: ''
+    Connection_Type: '0' // Default to 0
   });
   const [prediction, setPrediction] = useState(null);
 
@@ -38,22 +38,35 @@ function App() {
           {Object.keys(formData).map((key) => (
             <div key={key}>
               <label>{key.replace(/_/g, ' ')}:</label>
-              <input type="text" name={key} value={formData[key]} onChange={handleChange} required />
+              {key === 'Connection_Type' || key === 'FIN_Flag_Count' ? (
+                <select name={key} value={formData[key]} onChange={handleChange} required className="dropdown">
+                  {key === 'Connection_Type' ? (
+                    <>
+                      <option value="0">0</option>
+                      <option value="1">1</option>
+                    </>
+                  ) : (
+                    <>
+                      <option value="0">0</option>
+                      <option value="1">1</option>
+                      <option value="2">2</option>
+                    </>
+                  )}
+                </select>
+              ) : (
+                <input type="text" name={key} value={formData[key]} onChange={handleChange} required />
+              )}
             </div>
           ))}
           <button type="submit">Predict</button>
         </form>
       </div>
       {prediction && (
-        <div className="result-container">
-          <h3>Prediction Result</h3>
-          <p><strong>Predicted Class:</strong> {prediction.class}</p>
-          {/* <h4>Class Probabilities:</h4>
-          <ul>
-            {Object.entries(prediction.probabilities).map(([label, prob]) => (
-              <li key={label}>{label}: {prob.toFixed(4)}</li>
-            ))}
-          </ul> */}
+        <div className="result-wrapper">
+          <div className="result-container">
+            <h3>Prediction Result</h3>
+            <p><strong>Predicted Class:</strong> {prediction.class}</p>
+          </div>
         </div>
       )}
     </div>
