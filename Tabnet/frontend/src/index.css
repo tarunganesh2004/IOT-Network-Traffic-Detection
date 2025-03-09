@@ -23,15 +23,16 @@ body {
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
   /* width: 90%; */
   max-width: 900px;
-  width: 100%;
+  width: 90%;
   text-align: center;
+  height: 90%;
 }
 
 /* Form Grid: Two fields per row */
 .form-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 50px; /* Added more space between fields */
+  gap: 35px; /* Added more space between fields */
   padding: 10px 5px; /* Added internal padding */
 }
 
