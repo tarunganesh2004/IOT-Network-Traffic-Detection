@@ -2,7 +2,3 @@ datasets
 svm/IotFinalDataset.csv
 Decision Tree/IotFinalDataset.csv
 Tabnet/IotFinalDataset.csv
-Tabnet/backend/model
-Tabnet/backend/model/label_encoder.pkl
-Tabnet/backend/model/scaler.pkl
-Tabmet/backend/model/tabnet_model.pkl
