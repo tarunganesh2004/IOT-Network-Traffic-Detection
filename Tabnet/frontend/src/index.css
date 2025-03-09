@@ -27,6 +27,17 @@ body {
   text-align: center;
   height: 90%;
 }
+/* Ensure dropdowns appear side by side */
+.dropdown-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px; /* Adjust the space between dropdowns */
+}
+
+/* Make sure both dropdowns take equal width */
+.dropdown-row .form-group {
+  flex: 1;
+}
 
 /* Form Grid: Two fields per row */
 .form-grid {

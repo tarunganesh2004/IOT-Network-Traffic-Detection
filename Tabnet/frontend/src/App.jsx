@@ -6,11 +6,11 @@ function App() {
   const [formData, setFormData] = useState({
     Protocol: "",
     Flow_IAT_Mean: "",
-    FIN_Flag_Count: "0",
     RST_Flag_Count: "",
     Down_Up_Ratio: "",
     Fwd_Seg_Size_Min: "",
     Idle_Max: "",
+    FIN_Flag_Count: "0",
     Connection_Type: "0",
   });
 
@@ -36,31 +36,12 @@ function App() {
       <h2>IoT Network Traffic Prediction</h2>
       <form onSubmit={handleSubmit}>
         <div className="form-grid">
-          {Object.keys(formData).map((key, index) => (
-            <div key={key} className="form-group">
-              <label>{key.replace(/_/g, " ")}:</label>
-              {key === "Connection_Type" || key === "FIN_Flag_Count" ? (
-                <select
-                  name={key}
-                  value={formData[key]}
-                  onChange={handleChange}
-                  required
-                  className="dropdown"
-                >
-                  {key === "Connection_Type" ? (
-                    <>
-                      <option value="0">0</option>
-                      <option value="1">1</option>
-                    </>
-                  ) : (
-                    <>
-                      <option value="0">0</option>
-                      <option value="1">1</option>
-                      <option value="2">2</option>
-                    </>
-                  )}
-                </select>
-              ) : (
+          {/* Render all input fields first */}
+          {Object.keys(formData)
+            .filter((key) => key !== "FIN_Flag_Count" && key !== "Connection_Type")
+            .map((key) => (
+              <div key={key} className="form-group">
+                <label>{key.replace(/_/g, " ")}:</label>
                 <input
                   type="text"
                   name={key}
@@ -68,9 +49,39 @@ function App() {
                   onChange={handleChange}
                   required
                 />
-              )}
+              </div>
+            ))}
+
+          {/* FIN Flag Count & Connection Type dropdowns side by side */}
+          <div className="dropdown-row">
+            <div className="form-group">
+              <label>FIN Flag Count:</label>
+              <select
+                name="FIN_Flag_Count"
+                value={formData.FIN_Flag_Count}
+                onChange={handleChange}
+                required
+                className="dropdown"
+              >
+                <option value="0">0</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+              </select>
             </div>
-          ))}
+            <div className="form-group">
+              <label>Connection Type:</label>
+              <select
+                name="Connection_Type"
+                value={formData.Connection_Type}
+                onChange={handleChange}
+                required
+                className="dropdown"
+              >
+                <option value="0">0</option>
+                <option value="1">1</option>
+              </select>
+            </div>
+          </div>
         </div>
         <button type="submit">Predict</button>
       </form>
