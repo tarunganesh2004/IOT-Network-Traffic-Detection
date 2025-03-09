@@ -62,6 +62,33 @@ input, .dropdown {
   transition: all 0.3s;
   width: 100%;
 }
+/* Dropdown Styling */
+.dropdown {
+  appearance: none; /* Remove default system styling */
+  padding: 12px;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 5px;
+  font-size: 16px;
+  color: #fff;
+  outline: none;
+  transition: all 0.3s;
+  width: 100%;
+  cursor: pointer;
+}
+
+/* Dropdown Focus */
+.dropdown:focus {
+  border-color: #66aaff;
+  box-shadow: 0 0 8px rgba(102, 170, 255, 0.6);
+}
+
+/* Dropdown Options */
+.dropdown option {
+  background-color: #1e3c72; /* Dark background */
+  color: white; /* Text color */
+}
+
 
 input::placeholder {
   color: rgba(255, 255, 255, 0.7);
