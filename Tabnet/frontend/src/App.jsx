@@ -33,7 +33,7 @@ function App() {
 
   return (
     <div className="main-container">
-      <h2>IoT Traffic Prediction</h2>
+      <h2>IoT Network Traffic Prediction</h2>
       <form onSubmit={handleSubmit}>
         <div className="form-grid">
           {Object.keys(formData).map((key, index) => (

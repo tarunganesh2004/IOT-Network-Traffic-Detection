@@ -21,8 +21,9 @@ body {
   padding: 30px; /* Increased padding */
   border-radius: 12px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-  width: 90%;
+  /* width: 90%; */
   max-width: 900px;
+  width: 100%;
   text-align: center;
 }
 
@@ -30,7 +31,7 @@ body {
 .form-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 20px; /* Added more space between fields */
+  gap: 50px; /* Added more space between fields */
   padding: 10px 5px; /* Added internal padding */
 }
 
