@@ -1,1 +1,3 @@
-model
+model/label_encoder.pkl
+model/scaler.pkl
+model/tabnet_model.pkl
