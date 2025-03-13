@@ -107,9 +107,9 @@ Then open **http://localhost:3000/** in your browser.
 
 ---
 
-## 🤝 Contributors
-- **Tarun Ganesh** - Developer & Researcher  
-- **Vinayraj** - Contributor  
+## 🤝 Contributors 
+- **Vinayraj** - Developer & Contributer
+- **Tarun Ganesh** - Developer & Researcher 
 
 ---
 
