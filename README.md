@@ -29,15 +29,14 @@ This project focuses on detecting and classifying IoT network traffic using mach
 ✔️ Split dataset into **80% training** and **20% testing**  
 
 ### 🤖 **Modeling Approaches**:
-🔹 **Decision Tree** (Baseline Model)  
+🔹 **Multi Layer Perceptron** (Simple Deep learning model)  
 🔹 **Autoencoder** (Anomaly Detection Approach)  
-🔹 **SGDClassifier** (Calibrated with Log Loss)  
+🔹 **Resnet** (with residual connections)  
 🔹 **TabNet** (Final Chosen Model)  
 
 ### 📊 **Evaluation Metrics & Visualizations**:
 ✔️ **Accuracy Score**  
-✔️ **Confusion Matrix** (heatmap)  
-✔️ **Log Loss** (bar plot)  
+✔️ **Confusion Matrix** (heatmap)   
 ✔️ **Precision-Recall Curve**  
 ✔️ **ROC Curve with AUC Scores**  
 ✔️ **Feature Importance Plot** (Top 10 important features)  
