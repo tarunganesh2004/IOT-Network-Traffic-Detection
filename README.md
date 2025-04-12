@@ -22,7 +22,7 @@ This project focuses on detecting and classifying IoT network traffic using mach
 ## ⚙️ Features & Methodology
 
 ### 🛠 **Data Preprocessing**:
-✔️ Reduced dataset from **85 to 35 an then 8 relevant features**  
+✔️ Reduced dataset from **85 to 35 and then 8 relevant features**  
 ✔️ Handled missing values  
 ✔️ Encoded categorical variables  
 ✔️ Normalized numerical features using **StandardScaler**  
