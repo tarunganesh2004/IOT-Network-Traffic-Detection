@@ -1,7 +1,7 @@
-# 🌐 IoT Network Traffic Detection using TabNet & React
+# 🌐 IoT Network Traffic Detection using TabNet 
 
 ## 📌 Project Overview
-This project focuses on detecting and classifying IoT network traffic using machine learning models. The goal is to predict the type of network traffic based on extracted features from the **ACI IoT 2023 dataset**. Multiple models were evaluated, and **TabNet** was chosen as the final model for deployment. A **React-based web application** was developed for real-time predictions. 
+This project focuses on detecting and classifying IoT network traffic using deep learning models. The goal is to predict the type of network traffic based on extracted features from the **ACI IoT 2023 dataset**. Multiple models were evaluated, and **TabNet** was chosen as the final model for deployment. A **React-based web application** was developed for real-time predictions. 
 
 ---
 
@@ -22,7 +22,7 @@ This project focuses on detecting and classifying IoT network traffic using mach
 ## ⚙️ Features & Methodology
 
 ### 🛠 **Data Preprocessing**:
-✔️ Reduced dataset from **85 to 8 relevant features**  
+✔️ Reduced dataset from **85 to 35 and then 8 relevant features**  
 ✔️ Handled missing values  
 ✔️ Encoded categorical variables  
 ✔️ Normalized numerical features using **StandardScaler**  
