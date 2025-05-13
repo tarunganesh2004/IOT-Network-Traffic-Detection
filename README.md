@@ -3,6 +3,7 @@
 ## 📌 Project Overview
 This project focuses on detecting and classifying IoT network traffic using deep learning models. The goal is to predict the type of network traffic based on extracted features from the **ACI IoT 2023 dataset**. Multiple models were evaluated, and **TabNet** was chosen as the final model for deployment. A **React-based web application** was developed for real-time predictions. 
 
+
 ---
 
 ## 📂 Dataset
